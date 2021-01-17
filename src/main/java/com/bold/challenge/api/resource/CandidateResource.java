@@ -20,7 +20,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@Api(value = "SWAGGER")
+@Api(value = "BOLD")
 @RequestMapping(path = "/api/candidate")
 public interface CandidateResource {
 
@@ -42,5 +42,5 @@ public interface CandidateResource {
 
 	@ApiOperation(value = "Delete a candidate by id")
 	@DeleteMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	ResponseEntity delete(@PathVariable("id") Integer id);
+	ResponseEntity<Boolean> delete(@PathVariable("id") Integer id);
 }
